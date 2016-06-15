@@ -10,11 +10,11 @@ All shell scripts are invoked from the Vagrantfile via provisioning. There, you 
 
 In order to use this package, we need to provide access to our maven repository from the VM. Unfortunately, we need a running JDK for that so be sure to install it on your host machine and setup your JAVA_HOME.
 
-The two steps below need to be redone every time the classpath changes. For that matter, `Vagrant/setup_autocomplete-java.sh` exists which is also executed when `vagrant up` is performed. Rerun manually when necessary.
+The two steps below need to be redone every time the classpath changes. For that matter, `Vagrant/setup_autocomplete-java.sh` exists which is also executed when `vagrant up` is performed. Rerun manually when necessary by using the script. You don't need to do this by performing the descriped steps.
 
 ## Maven Repository
 
-There is one hidden folders at Vagrant/:
+There needs to be one hidden folder at /vagrant (inside the VM). This folder is synced to your host into the Vagrant/ folder:
 * .m2/ : contains the maven repository
 
 This folders is filled with the following command:
